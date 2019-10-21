@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registered!</title>
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+        <h2>You have succesfully registered as a teacher. You will recieve an email on the registered emai address.</h2>
+        <div>
+            <form action="http://localhost:8000/upload" enctype="multipart/form-data" method="POST">
+                <input type="file" name="videofile" accept="video/mp4" multiple><br>
+                <textarea name="description" cols="30" rows="10" placeholder="Description"></textarea>
+                <label>videonumber<input type="text" name="video_no" /></label>
+                <label>coursename<input type="text" name="coursename" /></label>
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+    </body>
+</html>
