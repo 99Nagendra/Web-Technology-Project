@@ -197,6 +197,16 @@ videos.find().distinct('course_name',function(err,result){
 });
 
 
-
+app.post('/frontteacher',function(req,res){
+   
+    videos.find({},function(err,result){
+        if(err) return console.log(err);
+        console.log("&&&&&&&&&&&&&&&&");
+        console.log(typeof result[0]);
+        console.log({result});
+        console.log("&&&&&&&&&&&&&&&&");
+        res.render(__dirname+'/views/teacher_registration.ejs',{result})
+    });
+});
 
 module.exports = app;
