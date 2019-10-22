@@ -152,7 +152,7 @@ app.post('/coursevideos',function(req,res){
       
     
     // console.log("result 823874388738787328982989  \n"+result);
-    res.render(__dirname+'/views/coursevideos.ejs',{result } );
+    res.render(__dirname+'/views/coursevideos.ejs',{result} );
     
     });
 
@@ -187,5 +187,16 @@ app.post('/coursevideos',function(req,res){
 //   });
 //   res.render("registered");
 // })
+app.post('/front',function(req,res){
+    
+videos.find().distinct('course_name',function(err,result){
+    console.log(typeof result[0]);
+    console.log(result[0]);
+    res.render(__dirname+'/views/courses.ejs',{result});
+});
+});
+
+
+
 
 module.exports = app;
